@@ -37,7 +37,7 @@ public class TencentStockHandler extends AbstractHandler {
     }
 
     @Override
-    protected void refreshData() throws Exception {
+    protected void refreshData() throws Throwable {
         // 远程读取数据
         List<FundStockModelConfig> fundStockModelConfigList = this.getParseData(settingConfig.getSettingConfigUnits());
         if (settingConfig.getLogCheckBox()) {
@@ -96,7 +96,7 @@ public class TencentStockHandler extends AbstractHandler {
                     }
                     this.wrapperWidth = true;
                 }
-            } catch (Exception e) {
+            } catch (Throwable e) {
                 LogUtil.info("股票处理异常：" + ExceptionUtils.getFullStackTrace(e));
             }
         });

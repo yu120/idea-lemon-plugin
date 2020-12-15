@@ -95,7 +95,7 @@ public class TianTianFundHandler extends AbstractHandler {
                     }
                     this.wrapperWidth = true;
                 }
-            } catch (Exception e) {
+            } catch (Throwable e) {
                 LogUtil.info("基金处理异常：" + ExceptionUtils.getFullStackTrace(e));
             }
         });

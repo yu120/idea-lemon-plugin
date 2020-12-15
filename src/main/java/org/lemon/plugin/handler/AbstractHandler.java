@@ -60,14 +60,14 @@ public abstract class AbstractHandler {
                     if (now.isBefore(startTime) || now.isAfter(endTime)) {
                         return;
                     }
-                } catch (Exception ignore) {
+                } catch (Throwable ignore) {
                     return;
                 }
             }
 
             try {
                 refreshData();
-            } catch (Exception e) {
+            } catch (Throwable e) {
                 LogUtil.info("抓取数据：" + ExceptionUtils.getFullStackTrace(e));
             }
         }, 0, settingConfig.getFundRefreshSecond(), TimeUnit.SECONDS);
@@ -88,7 +88,7 @@ public abstract class AbstractHandler {
                 BigDecimal temp = BigDecimal.valueOf(0);
                 try {
                     temp = new BigDecimal(value.toString().substring(0, value.toString().length() - 1));
-                } catch (Exception e) {
+                } catch (Throwable e) {
                     e.printStackTrace();
                 }
 
@@ -113,7 +113,7 @@ public abstract class AbstractHandler {
         });
     }
 
-    protected List<ColumnInfo> calculateColumnNames(SettingConfig settingConfig) throws Exception {
+    protected List<ColumnInfo> calculateColumnNames(SettingConfig settingConfig) throws Throwable {
         List<ColumnInfo> columnNames = new ArrayList<>();
         Field[] fields = settingConfig.getClass().getDeclaredFields();
         for (Field field : fields) {
@@ -220,7 +220,7 @@ public abstract class AbstractHandler {
         return columnData.toArray();
     }
 
-    protected abstract void refreshData() throws Exception;
+    protected abstract void refreshData() throws Throwable;
 
     public static class ColumnInfo {
         private String name;
