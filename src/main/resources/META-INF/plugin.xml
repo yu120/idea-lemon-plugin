@@ -1,0 +1,35 @@
+<idea-plugin>
+    <id>org.lemon.plugin.lemon</id>
+    <name>Lemon</name>
+    <version>1.0</version>
+    <vendor email="595208882@qq.com" url="http://www.baidu.com">Ding</vendor>
+
+    <description><![CDATA[
+      Developers and office workers staring at the disk artifact,
+      used to monitor the relevant data of stocks and funds at work in real time.
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Developers and office workers staring at the disk artifact,
+      used to monitor the relevant data of stocks and funds at work in real time.
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <toolWindow id="Ding" icon="/icon.png" anchor="right" order="last" factoryClass="org.lemon.plugin.FundWindow"/>
+        <applicationConfigurable id="Ding" instance="org.lemon.plugin.DingSetting"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>
