@@ -41,6 +41,7 @@ public class DingSetting implements Configurable {
     private JCheckBox todayAmountCheckBox;
     private JCheckBox allRateOfReturnCheckBox;
     private JCheckBox allAmountCheckBox;
+    private JCheckBox allMarketValueCheckBox;
     private JCheckBox lastTimeCheckBox;
     /**
      * 隐身颜色代码
@@ -199,6 +200,7 @@ public class DingSetting implements Configurable {
         settingConfig.setTodayAmountCheckBox(todayAmountCheckBox.isSelected());
         settingConfig.setAllRateOfReturnCheckBox(allRateOfReturnCheckBox.isSelected());
         settingConfig.setAllAmountCheckBox(allAmountCheckBox.isSelected());
+        settingConfig.setAllMarketValue(allMarketValueCheckBox.isSelected());
         settingConfig.setLastTimeCheckBox(lastTimeCheckBox.isSelected());
 
         // 隐身颜色代码

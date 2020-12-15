@@ -2,6 +2,7 @@ package org.lemon.plugin.handler;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.intellij.ui.JBColor;
+import com.sun.tools.internal.ws.wsdl.document.jaxws.Exception;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.exception.ExceptionUtils;
 import org.lemon.plugin.FundFieldInfo;
@@ -146,15 +147,19 @@ public abstract class AbstractHandler {
         if (settingConfig.getNameCheckBox()) {
             columnData.add(settingConfig.getPinyinCheckBox() ? PinYinUtils.toPinYin(name) : name);
         }
+        // 代码
         if (settingConfig.getCodeCheckBox()) {
             columnData.add(fundStockModel.getCode());
         }
+        // 当前价格
         if (settingConfig.getNowPriceCheckBox()) {
             columnData.add(fundStockModel.getNowPrice());
         }
+        // 涨跌金额
         if (settingConfig.getChangePriceCheckBox()) {
             columnData.add(fundStockModel.getChangePrice());
         }
+        // 涨跌幅度
         if (settingConfig.getChangePercentCheckBox()) {
             columnData.add(fundStockModel.getChangePercent());
         }
@@ -184,7 +189,7 @@ public abstract class AbstractHandler {
             }
         }
         if (settingConfig.getAllRateOfReturnCheckBox()) {
-            // 总收益
+            // 总收益=（当前价格-成本价格)×总数量
             BigDecimal stockAllAmount = new BigDecimal(fundStockModel.getNowPrice())
                     .subtract(BigDecimal.valueOf(settingConfigUnit.getPrice()))
                     .multiply(BigDecimal.valueOf(settingConfigUnit.getNum()));
@@ -202,6 +207,12 @@ public abstract class AbstractHandler {
                 columnData.add(allRate.setScale(2, BigDecimal.ROUND_HALF_UP) + "%");
             }
         }
+        if (settingConfig.getAllMarketValue()) {
+            // 总市值=当前价格×总数量
+            columnData.add(new BigDecimal(fundStockModel.getNowPrice())
+                    .multiply(BigDecimal.valueOf(settingConfigUnit.getNum()))
+                    .setScale(2, BigDecimal.ROUND_HALF_UP));
+        }
         if (settingConfig.getLastTimeCheckBox()) {
             columnData.add(fundStockModel.getLastTime());
         }
@@ -218,7 +229,6 @@ public abstract class AbstractHandler {
         private double compare;
 
         public ColumnInfo() {
-
         }
 
         public ColumnInfo(StockFieldInfo stockFieldInfo) {

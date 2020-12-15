@@ -224,6 +224,14 @@
               <text value="累计收益率"/>
             </properties>
           </component>
+          <component id="2bfef" class="javax.swing.JCheckBox" binding="allMarketValueCheckBox">
+            <constraints>
+              <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="总市值"/>
+            </properties>
+          </component>
         </children>
       </grid>
       <grid id="3459c" layout-manager="GridLayoutManager" row-count="1" column-count="9" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">

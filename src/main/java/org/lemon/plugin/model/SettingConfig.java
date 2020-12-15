@@ -7,6 +7,11 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 配置文件
+ *
+ * @author lry
+ */
 public class SettingConfig implements Serializable {
 
     private List<SettingConfigUnit> fundSettingConfigs = new ArrayList<>();
@@ -56,6 +61,9 @@ public class SettingConfig implements Serializable {
     @FundFieldInfo(value = "累计收益率", color = true)
     @StockFieldInfo(value = "累计收益率", color = true)
     private Boolean allRateOfReturnCheckBox = true;
+    @FundFieldInfo(value = "总市值", color = true)
+    @StockFieldInfo(value = "总市值", color = true)
+    private Boolean allMarketValue = false;
     @FundFieldInfo(value = "更新时间", width = 120)
     @StockFieldInfo(value = "更新时间", width = 130)
     private Boolean lastTimeCheckBox = true;
@@ -251,6 +259,14 @@ public class SettingConfig implements Serializable {
 
     public void setLastTimeCheckBox(Boolean lastTimeCheckBox) {
         this.lastTimeCheckBox = lastTimeCheckBox;
+    }
+
+    public Boolean getAllMarketValue() {
+        return allMarketValue;
+    }
+
+    public void setAllMarketValue(Boolean allMarketValue) {
+        this.allMarketValue = allMarketValue;
     }
 
     public String getInvisibleTextField() {
