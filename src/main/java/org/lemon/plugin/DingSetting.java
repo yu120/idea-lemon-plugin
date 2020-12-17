@@ -135,6 +135,7 @@ public class DingSetting implements Configurable {
         allRateOfReturnCheckBox.setSelected(settingConfig.getAllRateOfReturnCheckBox());
         allAmountCheckBox.setSelected(settingConfig.getAllAmountCheckBox());
         lastTimeCheckBox.setSelected(settingConfig.getLastTimeCheckBox());
+        allMarketValueCheckBox.setSelected(settingConfig.getAllMarketValue());
 
         // 隐身颜色代码
         invisibleTextField.setText(settingConfig.getInvisibleTextField());
