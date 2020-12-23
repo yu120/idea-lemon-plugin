@@ -29,7 +29,7 @@
 然后将 build --> distributions --> idea-lemon-plugin-1.0.0-SNAPSHOT.zip 作为本地插件进行安装即可。
 
 
-成品插件：`dist/idea-lemon-plugin-1.0.0-SNAPSHOT.zip`
+成品插件：[idea-lemon-plugin-1.0.0-SNAPSHOT.zip](dist/idea-lemon-plugin-1.0.0-SNAPSHOT.zip)
 
 ## 5 使用方式
 配置设置路径：
