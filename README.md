@@ -16,12 +16,12 @@
 ## 2 基金
 数据来源：天天基金
 
-![fund](fund.png)
+![案例截图](fund.png)
 
 ## 3 股票
 数据来源：腾讯股票
 
-![stock](stock.png)
+![案例截图](stock.png)
 
 ## 4 打包安装
 使用gradle中 intellij --> buildPlugin 进行打包。
@@ -33,4 +33,4 @@
 File --> Setting --> Others Setting --> Ding
 ```
 
-![setting](setting.png)
+![案例截图](setting.png)
