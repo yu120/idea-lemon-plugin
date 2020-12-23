@@ -15,17 +15,20 @@
 
 ## 2 基金
 数据来源：天天基金
+![fund](fund.png)
 
 ## 3 股票
 数据来源：腾讯股票
+![stock](stock.png)
 
 ## 4 打包安装
 使用gradle中 intellij --> buildPlugin 进行打包。
 然后将 build --> distributions --> idea-lemon-plugin-1.0.0-SNAPSHOT.zip 作为本地插件进行安装即可。
 
 ## 5 使用方式
-
 配置设置路径：
 ```
 File --> Setting --> Others Setting --> Ding
 ```
+
+![setting](setting.png)
