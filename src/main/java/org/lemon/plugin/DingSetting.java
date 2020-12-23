@@ -98,7 +98,7 @@ public class DingSetting implements Configurable {
             List<SettingConfig.SettingConfigUnit> fundSettingConfigList = new ArrayList<>();
             fundSettingConfigList.add(fund1);
             fundSettingConfigList.add(fund2);
-            settingConfig.setFundSettingConfigStr(JSON.toJSONString(fund1) + "\\n" + JSON.toJSONString(fund2));
+            settingConfig.setFundSettingConfigStr(JSON.toJSONString(fund1) + "\n" + JSON.toJSONString(fund2));
             settingConfig.setFundSettingConfigs(fundSettingConfigList);
         }
         if (settingConfig.getStockSettingConfigStr() == null || settingConfig.getStockSettingConfigStr().length() == 0) {
@@ -109,7 +109,7 @@ public class DingSetting implements Configurable {
             settingConfigUnitList.add(stock1);
             settingConfigUnitList.add(stock2);
             settingConfigUnitList.add(stock3);
-            settingConfig.setStockSettingConfigStr(JSON.toJSONString(stock1) + "\\n" + JSON.toJSONString(stock2) + "\\n" + JSON.toJSONString(stock3));
+            settingConfig.setStockSettingConfigStr(JSON.toJSONString(stock1) + "\n" + JSON.toJSONString(stock2) + "\n" + JSON.toJSONString(stock3));
             settingConfig.setSettingConfigUnits(settingConfigUnitList);
         }
 
