@@ -101,7 +101,7 @@ public class TianTianFundHandler extends AbstractHandler {
         });
 
         SwingUtilities.invokeLater(() -> label.setText("最后刷新时间:" +
-                new SimpleDateFormat("yyyy-MM-dd HH:mm ss").format(new Date())));
+                new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())));
     }
 
     /**
